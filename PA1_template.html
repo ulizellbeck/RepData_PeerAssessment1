@@ -232,10 +232,16 @@ steps_Data &lt;- dcast(data_Melt, date ~ variable, sum)
 
 <p>The mean is:</p>
 
+<pre><code class="r">mean(steps_Data$steps)
+</code></pre>
+
 <pre><code>## [1] 10766
 </code></pre>
 
 <p>The median is:</p>
+
+<pre><code class="r">median(steps_Data$steps)
+</code></pre>
 
 <pre><code>## [1] 10765
 </code></pre>
@@ -267,6 +273,9 @@ steps_Mean &lt;- dcast(data_Melt_2, interval ~ variable, mean)
 
 <p>It is interval number:</p>
 
+<pre><code class="r">steps_Mean$interval[which.max(steps_Mean$steps)]
+</code></pre>
+
 <pre><code>## [1] 835
 </code></pre>
 
@@ -277,6 +286,9 @@ steps_Mean &lt;- dcast(data_Melt_2, interval ~ variable, mean)
 </ol>
 
 <p>The total number of missing values is:</p>
+
+<pre><code class="r">nrow(data_read) - nrow(data_cleaned)
+</code></pre>
 
 <pre><code>## [1] 2304
 </code></pre>

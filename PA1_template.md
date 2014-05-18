@@ -62,12 +62,20 @@ hist(steps_Data$steps, main = "Histogram of total number of steps each day",
 
 The mean is:
 
+```r
+mean(steps_Data$steps)
+```
+
 ```
 ## [1] 10766
 ```
 
 
 The median is:
+
+```r
+median(steps_Data$steps)
+```
 
 ```
 ## [1] 10765
@@ -102,6 +110,10 @@ plot(steps_Mean, type = "l", xlab = "Interval", ylab = "Average number of steps"
 
 It is interval number:
 
+```r
+steps_Mean$interval[which.max(steps_Mean$steps)]
+```
+
 ```
 ## [1] 835
 ```
@@ -112,6 +124,10 @@ It is interval number:
 1. Calculate and report the total number of missing values in the dataset (i.e. the total number of rows with NAs)
 
 The total number of missing values is:
+
+```r
+nrow(data_read) - nrow(data_cleaned)
+```
 
 ```
 ## [1] 2304

@@ -48,12 +48,12 @@ hist(steps_Data$steps,
 2. Calculate and report the mean and median total number of steps taken per day
 
 The mean is:
-```{r echo=FALSE}
+```{r}
 mean(steps_Data$steps)
 ```
 
 The median is:
-```{r echo=FALSE}
+```{r}
 median(steps_Data$steps)
 ```
 
@@ -78,7 +78,7 @@ plot(steps_Mean, type="l", xlab = "Interval", ylab = "Average number of steps")
 2. Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
 It is interval number:
-```{r echo=FALSE}
+```{r}
 steps_Mean$interval[which.max(steps_Mean$steps)]
 ```
 
@@ -87,7 +87,7 @@ steps_Mean$interval[which.max(steps_Mean$steps)]
 1. Calculate and report the total number of missing values in the dataset (i.e. the total number of rows with NAs)
 
 The total number of missing values is:
-```{r echo=FALSE}
+```{r}
 nrow(data_read)-nrow(data_cleaned)
 ```
 
